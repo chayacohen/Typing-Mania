@@ -12,7 +12,7 @@
 - [Technologies, Libraries, APIs](#technologies-libraries-apis)
 
 - [Implementation Timeline](#implementation-timeline)
-     - [Friday Aternoon & Weekend](friday-afternoon-and-weekend)
+     - [Friday Aternoon & Weekend](friday-afternoon--weekend)
      - [Monday](#monday) 
      - [Tuesday](#tuesday)
      - [Wednesday](#wednesday)
