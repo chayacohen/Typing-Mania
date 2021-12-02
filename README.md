@@ -1,6 +1,10 @@
 # Typing Mania: #
 
-markdown 
+[Functionality & MVP's](#functionality--mvps)
+
+[How To Play](#how-to-play)
+
+[Tuesday](#tuesday)
 
 ## About ##
 
