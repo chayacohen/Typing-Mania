@@ -1,6 +1,7 @@
 # Typing Mania: #
-  -link to sections 
-  
+
+markdown 
+
 ## About ##
 
 Typing Mania is a game that provides a fun challenge as well as enhances your typing skills. 
