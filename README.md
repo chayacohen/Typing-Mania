@@ -49,7 +49,9 @@ In addition this project will include
 
 ## WireFrames ## 
 
-- The nav bar will inlude Github repo link and an instructions tab
+
+
+- The right nav bar will inlude Github repo link, dropdown theme menue, an instructions tab. It will also include the amount of lives left, the total number of words caught, and the player's current streak.
 - On the left side, there will be 3 buttons, one to start the game, one to pause the game, and one to reset. 
 - On the right, there will be options to change background color. 
 
