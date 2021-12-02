@@ -1,13 +1,20 @@
 # Typing Mania #
 
-##Table of Contents: ##
+## Table of Contents ##
 
-[About](#about)
-  [Goal](#goal)
+- [About](#about)
 
-[Functionality & MVP's](#functionality--mvps)
+     - [Goal](#goal)
+     - [How To Play](#how-to-play)
 
-[How To Play](#how-to-play)
+- [Functionality & MVP's](#functionality--mvps)
+- [WireFrames](#wireframes)
+- [Technologies, Libraries, APIs](#technologies--libraries--apis)
+
+- [Implementation Timeline](#implementation-timeline)
+
+
+
 
 [Tuesday](#tuesday)
 
