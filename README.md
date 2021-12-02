@@ -9,14 +9,14 @@
 
 - [Functionality & MVP's](#functionality--mvps)
 - [WireFrames](#wireframes)
-- [Technologies, Libraries, APIs](#technologies--libraries--apis)
+- [Technologies, Libraries, APIs](#technologies-libraries-apis)
 
 - [Implementation Timeline](#implementation-timeline)
-
-
-
-
-[Tuesday](#tuesday)
+     - [Friday Aternoon & Weekend](friday-afternoon-and-weekend)
+     - [Monday](#monday) 
+     - [Tuesday](#tuesday)
+     - [Wednesday](#wednesday)
+     - [Thursday Morning]($thursday-morning)
 
 ## About ##
 
