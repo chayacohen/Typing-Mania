@@ -49,7 +49,7 @@ In addition this project will include
 
 ## WireFrames ## 
 
-
+<img width="1025" alt="Screen Shot 2021-12-02 at 5 49 39 PM" src="https://user-images.githubusercontent.com/90418154/144516375-0c3522ee-2f2b-4753-a289-7d650bcac73a.png">
 
 - The right nav bar will inlude Github repo link, dropdown theme menue, an instructions tab. It will also include the amount of lives left, the total number of words caught, and the player's current streak.
 - On the left side, there will be 3 buttons, one to start the game, one to pause the game, and one to reset. 
