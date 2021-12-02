@@ -1,4 +1,9 @@
-# Typing Mania: #
+# Typing Mania #
+
+##Table of Contents: ##
+
+[About](#about)
+  [Goal](#goal)
 
 [Functionality & MVP's](#functionality--mvps)
 
