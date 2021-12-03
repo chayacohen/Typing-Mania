@@ -40,11 +40,11 @@ In Typing Mania, users will be able to:
 - View a list of all the words that appeared on the screen throughout the game once the game ends. They will be able to click on a word and view the corresponding 
 definition
 - View the total amount of words typed throughout the course of the game
-- View the streak of how many words were typed before the hit the bottom of the play area
+- View the streak of how many words were typed before they hit the bottom of the play area
 
 
 In addition this project will include
-- An instructions button that is clickable and in a pop-up format once clicked. 
+- An instructions button that is clickable and in pop-up format. 
 - A production READMe.
 
 ## WireFrames ##
@@ -52,13 +52,13 @@ In addition this project will include
 <img width="1024" alt="Screen Shot 2021-12-02 at 5 58 54 PM" src="https://user-images.githubusercontent.com/90418154/144516533-3fd8a882-4087-4f72-a358-c954187c4192.png">
 
 
-- The right nav bar will inlude Github repo link, dropdown theme menue, an instructions tab. It will also include the amount of lives left, the total number of words caught, and the player's current streak.
+- The right nav bar will include a Github repo link, dropdown theme menu, and an instructions tab. It will also include the amount of lives left, the total number of words caught, and the player's current streak.
 - On the left side, there will be 3 buttons, one to start the game, one to pause the game, and one to reset. 
 - On the right, there will be options to change background color. 
 
 ## Technologies, Libraries, APIs ##
 This project will be implemented using the following technologies: 
-- Wordnik API to generate random words to be displated on the screen. 
+- Wordnik API to generate random words to be displayed on the screen. 
 - Merriam Webster Collegiate Dictionary API to display word definitions once game is over. 
 - Webpack to bundle up the Javascript code 
 - npm to manage project dependencies
@@ -75,7 +75,7 @@ This project will be implemented using the following technologies:
 
 - Create a RandomWord class  
 - Create a Game class  
-- Using by basic frontend (for now), ensure the game logic is working as intended. 
+- Using my basic frontend (for now), ensure the game logic is working as intended. 
 
 ### Tuesday ###
 
