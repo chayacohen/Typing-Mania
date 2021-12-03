@@ -52,9 +52,9 @@ In addition this project will include
 <img width="1024" alt="Screen Shot 2021-12-02 at 5 58 54 PM" src="https://user-images.githubusercontent.com/90418154/144516533-3fd8a882-4087-4f72-a358-c954187c4192.png">
 
 
-- The right nav bar will include a Github repo link, dropdown theme menu, and an instructions tab. It will also include the amount of lives left, the total number of words caught, and the player's current streak.
+- The right nav bar will include a Github repo link, dropdown theme menu, and an instructions tab. 
+- The left nav bar will include the amount of lives left, the total number of words caught, and the player's current streak.
 - On the left side, there will be 3 buttons, one to start the game, one to pause the game, and one to reset. 
-- On the right, there will be options to change background color. 
 
 ## Technologies, Libraries, APIs ##
 This project will be implemented using the following technologies: 
