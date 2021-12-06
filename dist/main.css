@@ -26,7 +26,7 @@ ul {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div {
+.typing-area {
   display: flex;
   justify-content: center;
   background-color: mediumaquamarine;
@@ -35,18 +35,18 @@ div {
   margin: 0;
 }
 
-textarea {
+.typing-area {
   resize: none;
   background-color: transparent;
   display: flex;
   text-align: center;
   justify-content: center;
   font-size: 40px;
-  border-radius: 3%;
-  border-color: mediumaquamarine;
-  border-style: none;
+  border: none;
+  outline: none;
 }
 
 canvas {
   background-color: mediumaquamarine;
+  margin: 0;
 }

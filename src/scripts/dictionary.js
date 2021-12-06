@@ -1,6 +1,6 @@
 class Dictionary {
        constructor () {
-        this.numWords = 0;
+        // this.numWords = 0;
         this.words;
         this.generateRandomWords().then(payload => {
             this.words = payload;
@@ -18,9 +18,9 @@ class Dictionary {
     };
 
 randomWord() {
-        const word = this.words[this.numWords];
+        const word = this.words.shift();
             // % this.words.length];
-        this.numWords += 1;
+        // this.numWords += 1;
         return word;
     };
 }

@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded" , () => {
     // const word = dictionary.randomWord();
     const canvas = document.querySelector("canvas")
     const ctx = canvas.getContext('2d')
+    // const typingArea = document.querySelector(".typing-area");
     const gameview = new GameView(canvas, ctx)
-    // const movingWord = new MovingWord(word, canvas, ctx)
+    // const movingWord = new MovingWord('hello', canvas, ctx)
     const game = new Game(canvas, ctx);
     // game.play();
 
@@ -24,7 +25,8 @@ document.addEventListener("DOMContentLoaded" , () => {
     window.canvas = canvas; 
     window.ctx = ctx; 
     window.gameview = gameview; 
-    window.game = game; 
+    window.game = game;
+    // window.movingWord = movingWord; 
     // window.movingWord = movingWord;  
 
 });
