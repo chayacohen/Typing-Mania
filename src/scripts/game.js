@@ -7,15 +7,10 @@ class Game {
         this.canvas = canvas;
         this.ctx = ctx 
         this.words =  {};
-        // {pure: new}; 
         this.missedWords = [];
-        // this.countdown();
-        // setTimeout(() => {
-            this.play();
-        // }, 3000);
+        this.countdown();
         setInterval(() => {this.draw()
         }, 20);
-        // call countdown function 3-2-1, instead of setTimeout and then call this.play; 
     }
 
     play() {
@@ -34,21 +29,26 @@ class Game {
             })
         }; 
 
-        // countdown() {
-        //     let num = 3
-        //     while (num > 0) {
-        //         setInterval ( () => {
-        //             this.ctx.beginPath();
-        //             this.ctx.font = 'normal 200px Monospace';
-        //             this.ctx.fillStyle = 'black';
-        //             this.ctx.fillText(num, 200, 200);
-        //             this.ctx.closePath();
-        //             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); 
-        //         }, 1000); 
-        //         num++; 
-        //     }
-        // }
-
+    countdown() {
+        let num = 3 
+        let id = setInterval ( () => {
+            if (num === 0) {
+                clearInterval(id);
+            }
+            else {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                this.ctx.beginPath();
+                this.ctx.font = 'normal 200px Monospace';
+                this.ctx.fillStyle = 'black';
+                this.ctx.fillText(num, 200, 200);
+                this.ctx.closePath();
+                console.log(num)
+                num--;}
+        }, 1000);
+        
+        this.play();
+        };
+}
     // pause() {
 
     // }
@@ -56,6 +56,5 @@ class Game {
     // restart() {
 
     // }
-}
 
 export default Game; 

@@ -13,6 +13,7 @@ class GameView {
         this.canvas.height = window.innerHeight * .8;
     }
     
+    
 
 }
 
