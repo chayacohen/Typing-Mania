@@ -1,0 +1,27 @@
+class MovingWord {
+    constructor(word, canvas, ctx) {
+        this.canvas = canvas;
+        this.ctx = ctx;
+        this.pos = [100, 0]; //make this random starting position 
+        this.vel = 1;
+        this.word = word;
+        // this.createWord = this.createWord.bind(this);
+        // this.actuallyMoveWord(); 
+        // random starting position
+    }
+
+    draw() {
+        this.ctx.beginPath();
+        this.ctx.font = 'normal 40px Monospace';
+        this.ctx.fillStyle = 'black';
+        this.ctx.fillText(this.word, this.pos[0], this.pos[1]);
+        this.ctx.closePath();
+    }
+
+    move() {
+        const newPos = [this.pos[0], this.pos[1] += this.vel]
+        this.pos = newPos 
+    }
+}
+
+export default MovingWord; 
