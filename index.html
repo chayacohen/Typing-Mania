@@ -17,14 +17,47 @@
         <li class=right id=level>LEVEL: 1</li>
     </ul>
     <ul class=left-nav>
-        <li class=left id=themes>THEMES</li>
-        <li class=left id=instructions>INSTRUCTIONS</li>
+        <li class=left >
+            <button id="themes">
+                THEMES
+            </button>
+        </li>
+        <li class=left> 
+            <button id="instructions">
+                INSTRUCTIONS
+            </button>
+        </li>
     </ul>
+
+    <div id='instructions-modal' class='modal'>
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p class="modal-body">
+                <h1 class="modal-body" id="instruction-header">Instructions</h1>
+                <h3 class="modal-body" id="goal-header">Goal</h3>
+                <p class="modal-body" id="goal-body">
+                    The goal of the game is to type the words on the screen before they reach the bottom. When you type in the correct word, the corresponding word will be removed from the screen. If a word reaches the bottom before it is fully typed, you will lose one life. You have a total of 3 lives per game.
+                </p>
+                <h3 class="modal-body" id="how-to-play">How To Play</h3>
+                <p class="modal-body" id="how-to-play-body">
+                    In the provided textbox, type in a word that matches one of the words on the screen. Use the enter or return key on your keyboard to remove the corresponding word off the screen. As you level up, more words will appear on the screen and they will begin to move faster towards the bottom.
+                </p>
+            </p>
+        </div>
+    </div>
+
+
     <div class="container">
-    <canvas></canvas>
-    <img class="button" id="play"src="https://cdn-icons-png.flaticon.com/512/656/656395.png">
-    <img class="button" id="pause" src="https://cdn-icons-png.flaticon.com/512/656/656402.png">
-    <img class="button" id="restart" src="https://cdn-icons-png.flaticon.com/512/656/656435.png">
+        <canvas></canvas>
+        <button>
+            <img class="button" id="play"src="https://cdn-icons-png.flaticon.com/512/656/656395.png">
+        </button>
+        <button>
+            <img class="button" id="pause" src="https://cdn-icons-png.flaticon.com/512/656/656402.png">
+        </button>
+        <button>
+            <img class="button" id="restart" src="https://cdn-icons-png.flaticon.com/512/656/656435.png">
+        </button>
     </div>
     <!-- <img class=pause src="https://cdn-icons-png.flaticon.com/512/656/656402.png" alt=""> -->
     <div>

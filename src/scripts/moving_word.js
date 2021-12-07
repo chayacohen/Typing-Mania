@@ -1,9 +1,9 @@
 class MovingWord {
-    constructor(word, canvas, ctx) {
+    constructor(word, canvas, ctx, vel) {
         this.canvas = canvas;
         this.ctx = ctx;
         this.pos = this.randomStartingPosition(); //make this random starting position 
-        this.vel = 1;
+        this.vel = vel;
         this.word = word;
         // random starting position
     }
@@ -26,7 +26,7 @@ class MovingWord {
         // this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.heigh)
         this.ctx.beginPath();
         this.ctx.font = 'normal 40px Monospace';
-        this.ctx.fillStyle = 'red';
+        this.ctx.fillStyle = '#eb6060';
         this.ctx.fillText(this.word, this.pos[0], this.pos[1]);
         this.ctx.closePath();
     }
