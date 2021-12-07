@@ -1,11 +1,16 @@
+@import "./styles/reset.scss";
 .title {
     display: flex;
     justify-content: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
 }
 
 ul {
     list-style: none;
+    padding: 20px;
 }
 
 .right-nav {
@@ -42,9 +47,45 @@ ul {
     font-size: 40px;
     border: none;     
     outline: none;
+    z-index: 1;
 }
 
-canvas {
+.container {
+    display: inline-flex;
     background-color:mediumaquamarine;
     margin: 0;
+    box-sizing: content-box;
+}
+
+.button {
+    max-width: 100px;
+    max-height: 100px;
+    display: inline;
+    flex-direction: column;
+ }
+
+ canvas {
+     display: flex; 
+     justify-content: center;
+     vertical-align: center;
+ }
+
+#play, #pause, #restart {
+    padding: 20px; 
+    position: fixed;
+}
+
+#play {
+    bottom: 530px; 
+    left: 5px;;
+}
+
+#pause {
+    bottom: 420px; 
+    left: 5px; 
+}
+
+#restart {
+    bottom: 310px; 
+    left: 5px;
 }

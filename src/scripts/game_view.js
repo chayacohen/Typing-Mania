@@ -5,12 +5,12 @@ class GameView {
         this.canvas = canvas
         this.ctx = ctx
         this.dictionary = new Dictionary()
-        this.fillScreen()
+        this.fillScreen();
     }
 
     fillScreen() {
         this.canvas.width = window.innerWidth; 
-        this.canvas.height = window.innerHeight * .8;
+        this.canvas.height = window.innerHeight * .78;
     } 
 }
 

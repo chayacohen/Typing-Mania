@@ -1,5 +1,6 @@
 import MovingWord from "./moving_word.js";
 import Dictionary from "./dictionary.js";
+import GameView from "./game_view.js";
 
 class Game {
     constructor(canvas, ctx) {
@@ -9,7 +10,10 @@ class Game {
         this.countdownNum = 3
         this.words = {};
         this.missedWords = [];
-        this.typedWords = []; 
+        this.typedWords = [];
+        this.interval = 5000; 
+        this.first = 1; 
+        this.level = 1;  
         this.lives = 3; 
         this.total = 0; 
         this.streak = 0; 
@@ -19,28 +23,44 @@ class Game {
         this.bindTypingEvent(); 
     }
 
-    play() {
-        setInterval(() => {
+    incrementLevel() {
+        if (this.total % 15 === 0) {
+            this.level += 1; 
+            this.interval -= 1000; 
+        }
+    }
+
+    firstWord() {
+        if (this.first === 1 || Object.keys(this.words).length === 0) {
             const word = this.dictionary.randomWord()
             const movingWord = new MovingWord(word, this.canvas, this.ctx)
-            this.words[word] = movingWord; 
-        }, 5000);
+            this.words[word] = movingWord;
+            this.first += 1;
+        }
+    }
+    play() {
+            setInterval(() => {
+                const word = this.dictionary.randomWord()
+                const movingWord = new MovingWord(word, this.canvas, this.ctx)
+                this.words[word] = movingWord; 
+            }, this.interval);
     };
 
     draw() {
             let myReq; 
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            const words = Object.values(this.words)
+            const words = Object.values(this.words);
             if (this.lives >= 0) {
+                // this.pause();
                 words.forEach (word => {
                         if (word.redCollisionDetection() === true) {
                             if (word.missedCollisionDetection() === true) {
                                 this.missedWords.push(word); 
-                                this.lives -=1
-                                this.streak = 0
-                                delete (this.words[word.word])
-                                this.updateLivesOnBoard()
-                                this.updateStreakOnBoard()
+                                this.lives -=1;
+                                this.streak = 0;
+                                delete (this.words[word.word]);
+                                this.updateLivesOnBoard();
+                                this.updateStreakOnBoard();
                             }
                             else {
                                 word.drawRed()
@@ -56,8 +76,8 @@ class Game {
                 // debugger
             }
             else {
-
                 cancelAnimationFrame(myReq)
+                //popUpGameOver()
             }; 
     }; 
 
@@ -72,7 +92,10 @@ class Game {
                 this.updateStreakOnBoard(); 
                 this.updateTotalOnBoard();
                 this.typedWords.push(word);
+                this.incrementLevel();
+                this.updateLevelOnBoard();
                 delete (this.words[word]);
+                this.firstWord();
                 typingArea.value = ""
             }
             // else shake typing box;
@@ -83,7 +106,10 @@ class Game {
        document.addEventListener('keypress', this.typingHandler.bind(this), true)
     }
 
-
+    updateLevelOnBoard() {
+        const levelOnBoard = document.getElementById("level")
+            levelOnBoard.innerText = `LEVEL: ${this.level}`
+    }
 
     updateLivesOnBoard() {
         const liveOnBoard = document.getElementById("lives")
@@ -110,6 +136,7 @@ class Game {
                  this.drawCountdownNum()} 
             else {
                 clearInterval(id)
+                this.firstWord();
                 this.play();
             }
         }, 1000); 
@@ -125,14 +152,19 @@ class Game {
         console.log(this.countdownNum);
         this.countdownNum -= 1;
     };
-     
 
-}
     // pause() {
+    //     const img = document.createElement('img'); 
+    //     img.src = 'https://cdn-icons-png.flaticon.com/512/656/656402.png'
+    //     this.canvas.appendChild(img); 
+    // }
+}
+
+    // restart() {
 
     // }
 
-    // restart() {
+    //endGame () {
 
     // }
 

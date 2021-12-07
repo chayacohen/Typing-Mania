@@ -2,14 +2,15 @@ class MovingWord {
     constructor(word, canvas, ctx) {
         this.canvas = canvas;
         this.ctx = ctx;
-        this.pos = [100, 0]; //make this random starting position 
+        this.pos = this.randomStartingPosition(); //make this random starting position 
         this.vel = 1;
         this.word = word;
         // random starting position
     }
 
     randomStartingPosition() {
-        const y = Math.random()
+        const y = Math.random() * ((this.canvas.width - 200) - 150) + 150; 
+        return [y, 0]
     }
 
     draw() {
@@ -36,7 +37,7 @@ class MovingWord {
     }
 
     redCollisionDetection() {
-        const canvasY = (this.canvas.height - 200)
+        const canvasY = (this.canvas.height - 250)
         const wordY = this.pos[1]
         return (canvasY <= wordY);
     }
