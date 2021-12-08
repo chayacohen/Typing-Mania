@@ -55,6 +55,138 @@ table {
   border-spacing: 0;
 }
 
+.modal {
+  display: none;
+}
+
+.welcome-modal {
+  display: block;
+}
+
+.welcome-modal, .modal, .pause-modal, .game-over-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #FECEAB;
+  color: black;
+  margin: 15% auto;
+  width: 30%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  border: none;
+  animation-name: changeState;
+  animation-duration: 1s;
+}
+
+.close-button, .welcome-close-button, .game-close-button, .pause-close-button {
+  color: lightgray;
+  font-size: 30px;
+  float: right;
+  display: block;
+}
+
+.close-button:hover, .close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.welcome-close-button:hover, .welcome-close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.game-close-button:hover, .game-close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pause-close-button:hover, .pause-close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: #2A363B;
+  padding: 20px;
+}
+
+.modal-body h1 h3 p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 50px;
+  line-height: 1.5;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.modal-header > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #f8e7db;
+}
+
+#goal-header, #how-to-play {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #2A363B;
+}
+
+#goal-body, #how-to-play-body, #welcome-body {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.6;
+  color: #2A363B;
+}
+
+#start-game-button, #resume-game-button, #new-game-button {
+  display: flex;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #f8e7db;
+  background-color: #2A363B;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.pause-modal {
+  display: none;
+}
+
+.game-over-modal {
+  display: none;
+}
+
+@keyframes changeState {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .title {
   display: flex;
   justify-content: center;
@@ -87,7 +219,7 @@ ul {
 .typing-area {
   display: flex;
   justify-content: center;
-  background-color: #61aa92;
+  background-color: #99B898;
   width: 1700px;
   height: 60px;
   margin: 0;
@@ -107,7 +239,7 @@ ul {
 
 .container {
   display: inline-flex;
-  background-color: #61aa92;
+  background-color: #99B898;
   margin: 0;
   box-sizing: content-box;
 }
@@ -157,49 +289,4 @@ button {
 button:hover {
   background: #8c918b;
   padding: 0.5em 0.5em;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: white;
-  color: black;
-  margin: 20% auto;
-  padding: 40px;
-  width: 50%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  border: none;
-}
-
-.close-button {
-  color: lightgray;
-  font-size: 30px;
-  float: right;
-  display: block;
-}
-
-.close-button:hover, .close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.instruction-header {
-  margin-top: 10px;
-}
-
-.modal-body h1 h3 p {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 50px;
-  line-height: 1.5;
 }

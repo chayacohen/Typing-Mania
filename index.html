@@ -31,9 +31,11 @@
 
     <div id='instructions-modal' class='modal'>
         <div class="modal-content">
-            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <span class="close-button">&times;</span>
+                <h1 id="instruction-header">Instructions</h1>
+            </div>
             <p class="modal-body">
-                <h1 class="modal-body" id="instruction-header">Instructions</h1>
                 <h3 class="modal-body" id="goal-header">Goal</h3>
                 <p class="modal-body" id="goal-body">
                     The goal of the game is to type the words on the screen before they reach the bottom. When you type in the correct word, the corresponding word will be removed from the screen. If a word reaches the bottom before it is fully typed, you will lose one life. You have a total of 3 lives per game.
@@ -43,6 +45,41 @@
                     In the provided textbox, type in a word that matches one of the words on the screen. Use the enter or return key on your keyboard to remove the corresponding word off the screen. As you level up, more words will appear on the screen and they will begin to move faster towards the bottom.
                 </p>
             </p>
+        </div>
+    </div>
+
+    <div class='welcome-modal'>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="welcome-close-button">&times;</span>
+                <h1 id="welcome">Welcome to Typing Mania</h1>
+            </div>
+            <p class="modal-body">
+            <p class="modal-body" id="welcome-body">
+                Get ready to test your typing skills!
+            </p>
+            <button id="start-game-button">Start Game</button>
+        </div>
+    </div>
+
+
+    <div class='pause-modal'>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="pause-close-button">&times;</span>
+                <h1 id="pause-body">PAUSED</h1>
+            </div>
+            <button id="resume-game-button">Resume Game</button>
+        </div>
+    </div>
+
+    <div class='game-over-modal'>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="game-close-button">&times;</span>
+                <h1 id="game-over">GAME OVER</h1>
+            </div>
+            <button id="new-game-button">New Game</button>
         </div>
     </div>
 
