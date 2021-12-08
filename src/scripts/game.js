@@ -13,7 +13,7 @@ class Game {
         this.interval = 5000; 
         this.first = 1; 
         this.level = 1; 
-        this.vel = this.level 
+        this.vel = 0.5;
         this.lives = 3; 
         this.total = 0; 
         this.streak = 0; 
@@ -27,8 +27,10 @@ class Game {
     }
 
     incrementLevel() {
-        if (this.total % 15 === 0) {
+        if (this.total !== 0 && this.total % 15 === 0) {
             this.level += 1; 
+            this.vel += 0.2;
+            console.log('level-changed')
             this.interval -= 500; 
         }
     }
@@ -41,14 +43,15 @@ class Game {
             this.first += 1;
         }
     }
+
     play() {
             const id = setInterval(() => {
-                const word = this.dictionary.randomWord()
-                const movingWord = new MovingWord(word, this.canvas, this.ctx, this.vel)
-                this.words[word] = movingWord; 
-                if (this.pause) {
-                    clearInterval(id);
+                if (!this.pause) {
+                    const word = this.dictionary.randomWord()
+                    const movingWord = new MovingWord(word, this.canvas, this.ctx, this.vel)
+                    this.words[word] = movingWord; 
                 }
+            //   console.log(this.interval);
             }, this.interval);
     };
 
@@ -100,8 +103,8 @@ class Game {
                             word.move()
                         }; 
                     })
-
-                    //game over popup 
+                    const gameOverModal = document.querySelector(".game-over-modal"); 
+                    gameOverModal.style.display = "block";
 
                 }
             else {
@@ -156,6 +159,9 @@ class Game {
         if (this.lives >= 0) {
             liveOnBoard.innerText = `LIVES: ${this.lives}`
         }
+        if (this.lives === 1) {
+            liveOnBoard.style.color = "red"; 
+        }
     }
 
     updateStreakOnBoard() {
@@ -168,7 +174,6 @@ class Game {
         totalOnBoard.innerText = `TOTAL: ${this.total}`;
     }
 
-        //3,2,1 not showing on canvas but is showing in console
 
      countdown() {
          let id = setInterval( () => {
@@ -192,41 +197,14 @@ class Game {
         this.countdownNum -= 1;
     };
 
-
-    // restartHandler(e) {
-    //     const restartButton = document.getElementById('restart')
-    //     if (e.target === restartButton) {
-    //         this.dictionary = new Dictionary(); 
-    //         this.countdownNum = 3; 
-    //         this.words = {}; 
-    //         this.missedWords = []; 
-    //         this.typedWords = []; 
-    //         this.interval = 5000;
-    //         this.first = 1; 
-    //         this.level = 1; 
-    //         this.vel = 1; 
-    //         this.lives = 3; 
-    //         this.total = 0; 
-    //         this.streak = 0;
-    //         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height) ;
-    //         this.countdown; 
-    //         setTimeout( () => {
-    //             this.draw.bind(this)();
-    //         }, 4000);
-    //     }
-    // }
-
-
-    // restart() {
-    //     addEventListener('click', this.restartHandler.bind(this));
-    // }
-
     pauseHandler(e) {
-        const pauseButton = document.getElementById('pause'); 
+        const pauseButton = document.getElementById('pause');
+        const pauseModal = document.querySelector(".pause-modal");
         if (e.target === pauseButton) {
             if (this.pause === false) {
                 this.pause = true; 
                 this.draw.bind(this)();
+                pauseModal.style.display = "block"
             }
         };
     }

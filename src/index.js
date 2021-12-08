@@ -4,12 +4,20 @@ import Game from './scripts/game.js';
 
 
 document.addEventListener("DOMContentLoaded" , () => {
-    const canvas = document.querySelector("canvas")
-    const ctx = canvas.getContext('2d')
-    const gameview = new GameView(canvas, ctx)
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext('2d');
+    const gameview = new GameView(canvas, ctx);
+    ctx.font = "normal 100px Monospace";
+    ctx.fillStyle = "black";
+    ctx.fillText("WELCOME TO", (canvas.width/3), (canvas.height / 2.6));
+    ctx.fillText("TYPING MANIA", (canvas.width / 3.15), (canvas.height / 1.6))
     // const game = new Game(canvas, ctx)
 
     const playButton = document.getElementById('play'); 
+    const resumeGameButton = document.querySelector("#resume-game-button");
+    const pauseModal = document.querySelector(".pause-modal")
+    const newGameButton = document.querySelector("#new-game-button")
+    const gameOverModal = document.querySelector(".game-over-modal")
     let gameState = false; 
     let game; 
     addEventListener('click', (event) => {
@@ -19,15 +27,16 @@ document.addEventListener("DOMContentLoaded" , () => {
                 game = new Game(canvas, ctx);
                 return game;
         }
-        else if (event.target === playButton && gameState && game.lives === 0) {
+        else if ((event.target === playButton || event.target === newGameButton) && gameState && game.lives === 0) {
+            gameOverModal.style.display = "none"
             game = new Game(canvas, ctx); 
             return game; 
         }
-        else if (event.target === playButton && gameState)
+        else if ((event.target === playButton || event.target === resumeGameButton) && gameState)
             { 
                 if (game.pause === true) {
                     game.pause = false; 
-                    game.play();
+                    pauseModal.style.display = "none";
                     return game.draw(); 
                 }
         }

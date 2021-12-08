@@ -57,13 +57,14 @@ table {
 
 .modal {
   display: none;
+  position: absolute;
 }
 
-.welcome-modal {
+#instructions-modal {
   display: block;
 }
 
-.welcome-modal, .modal, .pause-modal, .game-over-modal {
+.modal, .pause-modal, .game-over-modal {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -74,56 +75,65 @@ table {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
-  background-color: #FECEAB;
-  color: black;
-  margin: 15% auto;
+#instructions-modal-content {
+  margin: 8.7% auto;
   width: 30%;
+}
+
+.modal-content {
+  background-color: #242323;
+  color: #242323;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   border: none;
   animation-name: changeState;
   animation-duration: 1s;
 }
 
-.close-button, .welcome-close-button, .game-close-button, .pause-close-button {
-  color: lightgray;
+#game-over-content {
+  margin: 25% auto;
+  width: 50%;
+  background-color: transparent;
+}
+
+.pause-modal-content {
+  margin: 25% auto;
+  width: 50%;
+  background-color: transparent;
+}
+
+.close-button, .game-close-button, .pause-close-button {
+  color: #f2f3e6;
   font-size: 30px;
   float: right;
   display: block;
 }
 
 .close-button:hover, .close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.welcome-close-button:hover, .welcome-close-button:focus {
-  color: black;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }
 
 .game-close-button:hover, .game-close-button:focus {
-  color: black;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }
 
 .pause-close-button:hover, .pause-close-button:focus {
-  color: black;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }
 
 .modal-header {
-  background-color: #2A363B;
+  background-color: #242323;
   padding: 20px;
 }
 
 .modal-body h1 h3 p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 50px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -141,34 +151,44 @@ table {
   display: flex;
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #f8e7db;
+  color: #f2f3e6;
 }
 
-#goal-header, #how-to-play {
-  font-size: 20px;
-  padding: 10px;
+#pause-body, #game-over-body {
+  font-size: 80px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #f2f3e6;
+}
+
+#goal-header, #how-to-play, #controls-header {
+  font-size: 25px;
+  padding: 20px;
   font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #2A363B;
+  color: #f2f3e6;
 }
 
-#goal-body, #how-to-play-body, #welcome-body {
+#goal-body, #how-to-play-body, #controls-body {
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 1.6;
-  color: #2A363B;
+  color: #f2f3e6;
 }
 
-#start-game-button, #resume-game-button, #new-game-button {
+#resume-game-button, #new-game-button {
   display: flex;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
-  color: #f8e7db;
-  background-color: #2A363B;
+  font-size: 30px;
+  color: #f2f3e6;
+  background-color: #242323;
   justify-content: center;
   text-align: center;
   width: 100%;
+  padding: 20px;
 }
 
 .pause-modal {
@@ -177,6 +197,20 @@ table {
 
 .game-over-modal {
   display: none;
+}
+
+#controls-body {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  vertical-align: center;
+}
+
+.modal-image {
+  max-width: 50px;
+  max-height: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes changeState {
@@ -239,7 +273,7 @@ ul {
 
 .container {
   display: inline-flex;
-  background-color: #99B898;
+  background-color: mediumaquamarine;
   margin: 0;
   box-sizing: content-box;
 }

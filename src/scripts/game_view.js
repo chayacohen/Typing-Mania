@@ -17,11 +17,9 @@ class GameView {
     eventListeners() {
         const instructionsButton = document.querySelector("#instructions")
         const modal = document.querySelector(".modal");
-        const welcomeModal = document.querySelector(".welcome-modal")
         const pauseModal = document.querySelector(".pause-modal")
         const gameOverModal = document.querySelector(".game-over-modal")
         const closeButton = document.querySelector(".close-button");
-        const welcomeCloseButton = document.querySelector(".welcome-close-button")
         const pauseCloseButton = document.querySelector(".pause-close-button")
         const gameCloseButton = document.querySelector(".game-close-button")
 
@@ -34,9 +32,6 @@ class GameView {
             if(event.target === closeButton) {
                 modal.style.display = "none"};
 
-            if (event.target === welcomeCloseButton) {
-                welcomeModal.style.display = "none"
-            };
             if (event.target === pauseCloseButton) {
                 pauseModal.style.display = "none"
             };
@@ -48,9 +43,7 @@ class GameView {
         document.addEventListener("click", (event) => {
             if (event.target === modal) {
                 modal.style.display = "none" };
-            if (event.target === welcomeModal) {
-                welcomeModal.style.display = "none"
-            };
+                
             if (event.target === pauseModal) {
                 pauseModal.style.display = "none"
             };

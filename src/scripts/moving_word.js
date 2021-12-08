@@ -9,7 +9,7 @@ class MovingWord {
     }
 
     randomStartingPosition() {
-        const y = Math.random() * ((this.canvas.width - 200) - 150) + 150; 
+        const y = Math.random() * ((this.canvas.width - 300) - 150) + 150; 
         return [y, 0]
     }
 
@@ -26,7 +26,7 @@ class MovingWord {
         // this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.heigh)
         this.ctx.beginPath();
         this.ctx.font = 'normal 40px Monospace';
-        this.ctx.fillStyle = '#eb6060';
+        this.ctx.fillStyle = 'red';
         this.ctx.fillText(this.word, this.pos[0], this.pos[1]);
         this.ctx.closePath();
     }
