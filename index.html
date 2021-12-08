@@ -10,24 +10,25 @@
 </head>
 <body>
     <h1 class=title>TYPING MANIA</h1>
+<nav>
     <ul class=right-nav>
         <li class=right id=lives>LIVES: 3 </li>
         <li class=right id=streak> STREAK: 0 </li>
         <li class=right id=total> TOTAL: 0</li>
         <li class=right id=level>LEVEL: 1</li>
     </ul>
-    <ul class=left-nav>
-        <li class=left >
-            <button id="themes">
-                THEMES
-            </button>
-        </li>
+    <ul class=left-nav>    
         <li class=left> 
             <button id="instructions">
                 INSTRUCTIONS
             </button>
         </li>
+        <li class="left">
+            <a href="https://github.com/chayacohen/Typing-Mania-JS-project-.git"><img id="github-img"
+                    src="./github logo.png"></a>
+        </li>
     </ul>
+</nav>
 
     <div id='instructions-modal' class='modal'>
         <div class="modal-content" id="instructions-modal-content">
@@ -38,7 +39,7 @@
             <p class="modal-body">
                 <h3 class="modal-body" id="goal-header">GOAL</h3>
                 <p class="modal-body" id="goal-body">
-                    <ol>
+                    <ul class="goal-list">
                         <li class="modal-body" id="goal-body"> 
                             Type the words on the screen before they reach the bottom
                         </li>
@@ -49,26 +50,32 @@
                         <li class="modal-body" id="goal-body">
                             If a word reaches the bottom before it is fully typed, you will lose one life. You have a total of 3 lives per game.
                         </li>
-                    </ol>
+                    </ul>
                      <!-- - Type the words on the screen before they reach the bottom. 
                      - When you type a correct word, the corresponding word will be removed from the screen.
                      - If a word reaches the bottom before it is fully typed, you will lose one life. You have a total of 3 lives per game. -->
                 </p>
                 <h3 class="modal-body" id="how-to-play">HOW TO PLAY</h3>
                 <p class="modal-body" id="how-to-play-body"> 
-                    - In the provided textbox, type in a word that matches one of the words on the screen. 
-                    - Use the enter or return key on your
+                    In the provided textbox, type in a word that matches one of the words on the screen. 
+                    Use the enter or return key on your
                     keyboard to remove the corresponding word off the screen. 
-                    - As you level up, more words will appear on the screen and they will begin to move faster towards the bottom.
+                    As you level up, more words will appear on the screen and they will begin to move faster towards the bottom.
                 </p>
                 <h3 class="modal-body" id="controls-header">CONTROLS</h3>
                 <p class="modal-body" id=controls-body>
+                    <label class="button-ex">
                     <img class="modal-image modal-body" src="https://cdn-icons-png.flaticon.com/512/656/656395.png">
                     Press this button to play
+                    </label>
+                    <label class="button-ex">
                     <img class="modal-image modal-body" src="https://cdn-icons-png.flaticon.com/512/656/656402.png">
                     Press this button to pause
+                    </label>
+                    <label class="button-ex">
                     <img class="modal-image modal-body" src="https://cdn-icons-png.flaticon.com/512/656/656435.png">
                     Press this button to restart game
+                    </label>
                 </p>
             </p>
         </div>
