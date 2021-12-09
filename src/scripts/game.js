@@ -16,7 +16,7 @@ class Game {
         this.interval = 5000; 
         this.first = 1; 
         this.level = 1; 
-        this.vel = 0.5;
+        this.vel = 1;
         this.lives = 3; 
         this.total = 0; 
         this.streak = 0; 
@@ -31,7 +31,7 @@ class Game {
     incrementLevel() {
         if (this.total !== 0 && this.total % 15 === 0) {
             this.level += 1; 
-            this.vel += 0.4;
+            // this.vel += 0.4;
             this.interval -= 500; 
         }
     }
@@ -158,7 +158,6 @@ class Game {
             else {
                 e.preventDefault();
             }
-            // else shake typing box;
         };
     }
     
