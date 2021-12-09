@@ -10,6 +10,7 @@
 - [Functionality & MVP's](#functionality--mvps)
 - [WireFrames](#wireframes)
 - [Technologies, Libraries, APIs](#technologies-libraries-apis)
+- [Code](#code)
 
 - [Implementation Timeline](#implementation-timeline)
      - [Friday Aternoon & Weekend](#friday-afternoon--weekend)
@@ -21,6 +22,10 @@
 ## About ##
 
 Typing Mania is a game that provides a fun challenge as well as enhances your typing skills. 
+
+<img width="1676" alt="Screen Shot 2021-12-09 at 10 25 23 AM" src="https://user-images.githubusercontent.com/90418154/145425622-f218604f-687e-40a2-a5ca-83c06edd1492.png">
+
+<img width="1680" alt="Screen Shot 2021-12-09 at 10 25 54 AM" src="https://user-images.githubusercontent.com/90418154/145425680-5aba6e08-33b7-48c9-8377-de0bf8c327df.png">
 
 #### Goal ####
 The goal of the game is to type the words on the screen before they reach the bottom. When you type in the correct word, the corresponding word will be 
@@ -51,18 +56,26 @@ In addition this project will include
 
 <img width="1024" alt="Screen Shot 2021-12-02 at 5 58 54 PM" src="https://user-images.githubusercontent.com/90418154/144516533-3fd8a882-4087-4f72-a358-c954187c4192.png">
 
-
 - The right nav bar will include a Github repo link and an instructions tab. 
 - The left nav bar will include the amount of lives left, the total number of words caught, the player's current streak, as well as the current level.
 - On the left side, there will be 3 buttons, one to start the game, one to pause the game, and one to reset. 
 
 ## Technologies, Libraries, APIs ##
 This project will be implemented using the following technologies: 
-- Wordnik API to generate random words to be displayed on the screen. 
+<!-- - Wordnik API to generate random words to be displayed on the screen.  -->
+- NPM random-word included to generate random words
 <!-- - Merriam Webster Collegiate Dictionary API to display word definitions once game is over.  -->
 - Webpack to bundle up the Javascript code 
 - npm to manage project dependencies
 - Canvas to manage animation frame
+
+
+## Code ##
+
+<img width="770" alt="Screen Shot 2021-12-09 at 10 34 01 AM" src="https://user-images.githubusercontent.com/90418154/145426525-1027bbee-c2da-4f59-9d1a-4d8ad8b76e7e.png">
+
+<img width="837" alt="Screen Shot 2021-12-09 at 10 34 38 AM" src="https://user-images.githubusercontent.com/90418154/145426572-54035bc0-d3d2-44e3-96c1-650a047189b1.png">
+
 
 ## Implementation Timeline ## 
 
