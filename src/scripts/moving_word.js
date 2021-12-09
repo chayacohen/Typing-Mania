@@ -50,7 +50,7 @@ class MovingWord {
     missedCollisionDetection() {
         const canvasY = (this.canvas.height + 15)
         const wordY = this.pos[1]
-        return (canvasY === wordY);
+        return (canvasY <= wordY);
     }
 }
 

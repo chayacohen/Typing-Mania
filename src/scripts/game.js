@@ -51,7 +51,6 @@ class Game {
                     const word = this.dictionary.randomWord()
                     const movingWord = new MovingWord(word, this.canvas, this.ctx, this.vel)
                     this.words[word] = movingWord; 
-    
                 }
             }, this.interval);
     };
@@ -74,6 +73,7 @@ class Game {
         if (word.redCollisionDetection() === true) {
             if (word.missedCollisionDetection() === true) {
                 this.update(word);
+                console.log(this.lives)
             }
             else {
                 word.drawRed();
