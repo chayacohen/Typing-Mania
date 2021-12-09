@@ -31,7 +31,7 @@ class Game {
     incrementLevel() {
         if (this.total !== 0 && this.total % 15 === 0) {
             this.level += 1; 
-            // this.vel += 0.4;
+            this.vel += 0.4;
             this.interval -= 500; 
         }
     }
