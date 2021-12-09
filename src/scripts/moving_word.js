@@ -31,6 +31,14 @@ class MovingWord {
         this.ctx.closePath();
     }
 
+    drawGreen() {
+        this.ctx.beginPath();
+        this.ctx.font = 'normal 40px Monospace';
+        this.ctx.fillStyle = 'green';
+        this.ctx.fillText(this.word, this.pos[0], this.pos[1]);
+        this.ctx.closePath();
+    }
+
     move() {
         const newPos = [this.pos[0], this.pos[1] += this.vel]
         this.pos = newPos 

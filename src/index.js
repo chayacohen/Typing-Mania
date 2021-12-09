@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     const canvas = document.querySelector("canvas");
     const ctx = canvas.getContext('2d');
     const gameview = new GameView(canvas, ctx);
-    ctx.font = "normal 100px Monospace";
+    ctx.font = "normal 100px Impact";
     ctx.fillStyle = "black";
     ctx.fillText("WELCOME TO", (canvas.width/3), (canvas.height / 2.6));
     ctx.fillText("TYPING MANIA", (canvas.width / 3.15), (canvas.height / 1.6))
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     const pauseModal = document.querySelector(".pause-modal")
     const newGameButton = document.querySelector("#new-game-button")
     const gameOverModal = document.querySelector(".game-over-modal")
+    const lives = document.querySelector("#lives")
     let gameState = false; 
     let game; 
     addEventListener('click', (event) => {
@@ -29,7 +30,8 @@ document.addEventListener("DOMContentLoaded" , () => {
         }
         else if ((event.target === playButton || event.target === newGameButton) && gameState && game.lives === 0) {
             gameOverModal.style.display = "none"
-            game = new Game(canvas, ctx); 
+            game = new Game(canvas, ctx);
+            lives.style.color = "black"
             return game; 
         }
         else if ((event.target === playButton || event.target === resumeGameButton) && gameState)
@@ -48,6 +50,7 @@ document.addEventListener("DOMContentLoaded" , () => {
             game.pause = true;
             ctx.clearRect(0,0, canvas.width, canvas.height);
             game = new Game(canvas, ctx); 
+            lives.style.color = "black"
             return game; 
         }
     })

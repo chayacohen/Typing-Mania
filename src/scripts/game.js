@@ -1,5 +1,6 @@
 import MovingWord from "./moving_word.js";
 import Dictionary from "./dictionary.js";
+import Explosion from "./explosion.js"
 class Game {
 
     constructor(canvas, ctx) {
@@ -10,6 +11,8 @@ class Game {
         this.words = {};
         this.missedWords = [];
         this.typedWords = [];
+        this.inPauseWords = []; 
+        // this.explosions = []; 
         this.interval = 5000; 
         this.first = 1; 
         this.level = 1; 
@@ -29,8 +32,7 @@ class Game {
     incrementLevel() {
         if (this.total !== 0 && this.total % 15 === 0) {
             this.level += 1; 
-            this.vel += 0.2;
-            console.log('level-changed')
+            this.vel += 0.4;
             this.interval -= 500; 
         }
     }
@@ -47,9 +49,11 @@ class Game {
     play() {
             const id = setInterval(() => {
                 if (!this.pause) {
-                    const word = this.dictionary.randomWord()
-                    const movingWord = new MovingWord(word, this.canvas, this.ctx, this.vel)
-                    this.words[word] = movingWord; 
+                    for(let i = 0; i < this.level; i++) {
+                        const word = this.dictionary.randomWord()
+                        const movingWord = new MovingWord(word, this.canvas, this.ctx, this.vel)
+                        this.words[word] = movingWord; 
+                    }
                 }
             //   console.log(this.interval);
             }, this.interval);
@@ -60,7 +64,13 @@ class Game {
         this.lives -= 1;
         this.streak = 0;
         delete (this.words[word.word]);
+        // this.explosions.push(new Explosion(word))
     };
+
+    // handleExplosionDraw(explosion) {
+    //     explosion.draw(); 
+    //     explosion.update(); 
+    // }
 
 
     handleWordDraw(word) {
@@ -72,6 +82,9 @@ class Game {
                 word.drawRed();
                 word.move();
             }
+        }
+        else if (this.inPauseWords.includes(word)){
+            word.drawGreen();  
         }
         else {
             word.draw();
@@ -89,6 +102,12 @@ class Game {
                 words.forEach (word => {
                     this.handleWordDraw(word)
                 })
+                this.inPauseWords.forEach(word => {
+                    word.drawGreen(); 
+                })
+                // this.explosions.forEach(explosion => {
+                //     this.handleExplosionDraw(explosion);
+                // })
                 myReq = requestAnimationFrame(this.draw.bind(this))
             }
             else if (this.lives <= 0) {
@@ -133,7 +152,13 @@ class Game {
                     this.typedWords.push(word);
                     this.incrementLevel();
                     this.updateLevelOnBoard();
+                    const movingWord = this.words[word];
                     delete (this.words[word]);
+                    this.inPauseWords.push(movingWord); 
+                    const i = this.inPauseWords.indexOf(movingWord);
+                    debugger
+                    setTimeout(() => { delete this.inPauseWords[i]
+                    }, 300);
                     this.firstWord();
                     typingArea.value = ""
                 }
