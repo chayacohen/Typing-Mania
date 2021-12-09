@@ -6,7 +6,6 @@ class Particle {
         this.pos = this.randomPos();
         if (start) {
             this.vel = [0, -10]
-            console.log(this.vel)
         }
         else {
             this.vel = this.randomVec();
@@ -35,7 +34,6 @@ class Particle {
 
     draw() {
         this.ctx.beginPath();
-        console.log("draw-particle") 
         this.ctx.arc(this.pos[0], this.pos[1], 10, 0, 2 * Math.PI);
         this.ctx.fillStyle = "red";
         this.ctx.fill();

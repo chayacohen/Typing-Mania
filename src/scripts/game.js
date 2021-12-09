@@ -73,7 +73,6 @@ class Game {
         if (word.redCollisionDetection() === true) {
             if (word.missedCollisionDetection() === true) {
                 this.update(word);
-                console.log(this.lives)
             }
             else {
                 word.drawRed();
