@@ -23,6 +23,8 @@
 
 Typing Mania is a game that provides a fun challenge as well as enhances your typing skills. 
 
+[Click Here to Play Typing Mania](#)
+
 <img width="1676" alt="Screen Shot 2021-12-09 at 10 25 23 AM" src="https://user-images.githubusercontent.com/90418154/145425622-f218604f-687e-40a2-a5ca-83c06edd1492.png">
 
 <img width="1680" alt="Screen Shot 2021-12-09 at 10 25 54 AM" src="https://user-images.githubusercontent.com/90418154/145425680-5aba6e08-33b7-48c9-8377-de0bf8c327df.png">
