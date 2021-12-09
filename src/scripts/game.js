@@ -48,11 +48,10 @@ class Game {
     play() {
             const id = setInterval(() => {
                 if (!this.pause) {
-                    for(let i = 0; i < this.level; i++) {
-                        const word = this.dictionary.randomWord()
-                        const movingWord = new MovingWord(word, this.canvas, this.ctx, this.vel)
-                        this.words[word] = movingWord; 
-                    }
+                    const word = this.dictionary.randomWord()
+                    const movingWord = new MovingWord(word, this.canvas, this.ctx, this.vel)
+                    this.words[word] = movingWord; 
+    
                 }
             }, this.interval);
     };
@@ -80,9 +79,6 @@ class Game {
                 word.drawRed();
                 word.move();
             }
-        }
-        else if (this.inPauseWords.includes(word)){
-            word.drawGreen();  
         }
         else {
             word.draw();
@@ -153,7 +149,6 @@ class Game {
                     delete (this.words[word]);
                     this.inPauseWords.push(movingWord); 
                     const i = this.inPauseWords.indexOf(movingWord);
-                    debugger
                     setTimeout(() => { delete this.inPauseWords[i]
                     }, 300);
                     this.firstWord();
