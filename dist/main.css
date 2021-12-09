@@ -184,11 +184,12 @@ table {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 30px;
   color: #f2f3e6;
-  background-color: #242323;
+  background-color: transparent;
   justify-content: center;
   text-align: center;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
+  border-style: groove;
 }
 
 .pause-modal {

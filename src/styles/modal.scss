@@ -128,11 +128,14 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     color: rgb(242, 243, 230);
-    background-color: rgb(36, 35, 35);
+    // background-color: rgb(36, 35, 35);
+    background-color: transparent;
     justify-content: center;
     text-align: center;
     width: 100%; 
-    padding: 20px;
+    padding: 10px; 
+    border-style: groove;
+
 }
 
 .pause-modal {

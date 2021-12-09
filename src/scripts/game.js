@@ -26,7 +26,6 @@ class Game {
             this.draw.bind(this)();}, 4000);
         this.bindTypingEvent();
         this.pauseEvent(); 
-        // this.restart();
     }
 
     incrementLevel() {
@@ -55,7 +54,6 @@ class Game {
                         this.words[word] = movingWord; 
                     }
                 }
-            //   console.log(this.interval);
             }, this.interval);
     };
 
@@ -97,7 +95,6 @@ class Game {
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             const words = Object.values(this.words);
             if (this.lives > 0 && this.pause === false) {
-                // this.pause();
                 this.updateBoard();
                 words.forEach (word => {
                     this.handleWordDraw(word)
@@ -238,9 +235,5 @@ class Game {
         addEventListener('click', this.pauseHandler.bind(this))
     }
 }
-
-    //endGame () {
-
-    // }
 
 export default Game; 

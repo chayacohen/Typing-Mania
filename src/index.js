@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded" , () => {
     ctx.fillStyle = "black";
     ctx.fillText("WELCOME TO", (canvas.width/3), (canvas.height / 2.6));
     ctx.fillText("TYPING MANIA", (canvas.width / 3.15), (canvas.height / 1.6))
-    // const game = new Game(canvas, ctx)
 
     const playButton = document.getElementById('play'); 
     const resumeGameButton = document.querySelector("#resume-game-button");
@@ -56,11 +55,11 @@ document.addEventListener("DOMContentLoaded" , () => {
     })
 
     // only for testing, remove for development
-    window.canvas = canvas; 
-    window.ctx = ctx; 
-    window.gameview = gameview; 
-    window.game = game;
-    // window.playButton = playButton; 
+    // window.canvas = canvas; 
+    // window.ctx = ctx; 
+    // window.gameview = gameview; 
+    // window.game = game;
+    // // window.playButton = playButton; 
 });
 
 

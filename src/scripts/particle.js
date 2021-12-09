@@ -1,3 +1,6 @@
+//attempted to make a explosion but was not able to fully get it done so not using for now
+//hopefully will be able to implement later. 
+
 class Particle {
     constructor(word, start) {
         this.pos = this.randomPos();

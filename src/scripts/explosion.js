@@ -1,6 +1,9 @@
 import Particle from "./particle.js"
 
 
+//class not in use right now since was not able to fully get it done in time but 
+// will hopefully work on it later
+
 class Explosion {
     constructor(word) {
         this.particle = new Particle(word, true)
