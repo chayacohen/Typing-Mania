@@ -213,7 +213,7 @@ class Game {
     };
 
     pauseHandler(e) {
-        const pauseButton = document.getElementById('pause');
+        const pauseButton = document.getElementById('pause-button');
         const pauseModal = document.querySelector(".pause-modal");
         if (e.target === pauseButton) {
             if (this.pause === false) {

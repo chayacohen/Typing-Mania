@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     ctx.fillText("WELCOME TO", (canvas.width/3), (canvas.height / 2.6));
     ctx.fillText("TYPING MANIA", (canvas.width / 3.15), (canvas.height / 1.6))
 
-    const playButton = document.getElementById('play'); 
+    const playButton = document.getElementById('play-button'); 
     const resumeGameButton = document.querySelector("#resume-game-button");
     const pauseModal = document.querySelector(".pause-modal")
     const newGameButton = document.querySelector("#new-game-button")
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded" , () => {
         }
         });
 
-    const restartButton = document.getElementById('restart') 
+    const restartButton = document.getElementById('restart-button') 
     addEventListener('click', (event) => {
         if (event.target === restartButton && gameState) {
             game.pause = true;
