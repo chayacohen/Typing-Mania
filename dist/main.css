@@ -1,3 +1,357 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.modal{display:none;position:absolute}#instructions-modal{display:block}.modal,.pause-modal,.game-over-modal{position:fixed;z-index:1;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,.4)}#instructions-modal-content{margin:8.7% auto;width:30%}.modal-content{background-color:#242323;color:#242323;box-shadow:0 5px 8px 0 rgba(0,0,0,.2),0 7px 20px 0 rgba(0,0,0,.17);border:none;animation-name:changeState;animation-duration:1s}#game-over-content{margin:25% auto;width:50%;background-color:transparent}.pause-modal-content{margin:25% auto;width:50%;background-color:transparent}.close-button,.game-close-button,.pause-close-button{color:#f2f3e6;font-size:30px;float:right;display:block}.close-button:hover,.close-button:focus{color:red;text-decoration:none;cursor:pointer}.game-close-button:hover,.game-close-button:focus{color:red;text-decoration:none;cursor:pointer}.pause-close-button:hover,.pause-close-button:focus{color:red;text-decoration:none;cursor:pointer}.modal-header{background-color:#242323;padding:20px}.modal-body h1 h3 p{font-family:Cambria,Cochin,Georgia,Times,"Times New Roman",serif;font-size:20px;line-height:1.5}.modal-body{display:flex;justify-content:center;text-align:center;padding-left:10px;padding-right:10px}.modal-header>h1{font-size:30px;font-weight:bold;display:flex;justify-content:center;font-family:"Trebuchet MS","Lucida Sans Unicode","Lucida Grande","Lucida Sans",Arial,sans-serif;color:#f2f3e6}#pause-body,#game-over-body{font-size:80px;font-weight:bold;display:flex;justify-content:center;font-family:"Trebuchet MS","Lucida Sans Unicode","Lucida Grande","Lucida Sans",Arial,sans-serif;color:#f2f3e6}#goal-header,#how-to-play,#controls-header{font-size:25px;padding:10px;font-weight:bold;font-family:"Trebuchet MS","Lucida Sans Unicode","Lucida Grande","Lucida Sans",Arial,sans-serif;color:#f2f3e6}#goal-body,#how-to-play-body,#controls-body{padding-bottom:10px;font-size:18px;font-family:Georgia,"Times New Roman",Times,serif;line-height:1.6;color:#f2f3e6}#resume-game-button,#new-game-button{display:flex;font-family:Georgia,"Times New Roman",Times,serif;font-size:30px;color:#f2f3e6;background-color:transparent;justify-content:center;text-align:center;width:100%;padding:10px;border-style:groove}.pause-modal{display:none}.game-over-modal{display:none}#controls-body{display:flex;justify-content:space-between;text-align:center;vertical-align:center}.modal-image{max-width:50px;max-height:50px;display:flex;justify-content:space-between}.button-ex{display:flex;flex-direction:column;justify-content:flex-start;align-items:center}.goal-list{list-style-type:circle !important;color:#fff}@keyframes changeState{from{opacity:0}to{opacity:1}}.title{display:flex;justify-content:center;font-family:"monospace";font-size:35px;font-weight:bold;padding:20px}ul{list-style:none;padding:20px}nav{display:flex;justify-content:space-between}.right-nav{display:flex;align-items:center}.left-nav{display:flex;align-items:center}.left,.right{list-style:none;display:inline-block;margin:0 30px;font-family:Verdana,Geneva,Tahoma,sans-serif}.typing-area{display:flex;justify-content:center;background-color:#99b898;width:1700px;height:60px;margin:0}.typing-area{resize:none;background-color:transparent;display:flex;text-align:center;justify-content:center;font-size:40px;border:none;outline:none;z-index:1}.container{display:inline-flex;background-color:#66cdaa;margin:0;box-sizing:content-box}.button{max-width:110px;max-height:110px;display:inline;flex-direction:column}canvas{display:flex;justify-content:center;vertical-align:center}#play,#pause,#restart{padding:20px;position:fixed}#play{bottom:510px;left:5px}#pause{bottom:380px;left:5px}#restart{bottom:250px;left:5px}button{background:none;color:inherit;border:none;font:inherit;cursor:pointer;outline:inherit}button:hover{background:#8c918b;padding:.5em .5em}#github-link{max-height:10px;max-width:10px;resize:small}#github-img{max-height:30px;max-width:30px}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-/*# sourceMappingURL=main.css.map*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+}
+
+#instructions-modal {
+  display: block;
+}
+
+.modal, .pause-modal, .game-over-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#instructions-modal-content {
+  margin: 8.7% auto;
+  width: 30%;
+}
+
+.modal-content {
+  background-color: #242323;
+  color: #242323;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  border: none;
+  animation-name: changeState;
+  animation-duration: 1s;
+}
+
+#game-over-content {
+  margin: 25% auto;
+  width: 50%;
+  background-color: transparent;
+}
+
+.pause-modal-content {
+  margin: 25% auto;
+  width: 50%;
+  background-color: transparent;
+}
+
+.close-button, .game-close-button, .pause-close-button {
+  color: #f2f3e6;
+  font-size: 30px;
+  float: right;
+  display: block;
+}
+
+.close-button:hover, .close-button:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.game-close-button:hover, .game-close-button:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pause-close-button:hover, .pause-close-button:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: #242323;
+  padding: 20px;
+}
+
+.modal-body h1 h3 p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.modal-header > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #f2f3e6;
+}
+
+#pause-body, #game-over-body {
+  font-size: 80px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #f2f3e6;
+}
+
+#goal-header, #how-to-play, #controls-header {
+  font-size: 25px;
+  padding: 10px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #f2f3e6;
+}
+
+#goal-body, #how-to-play-body, #controls-body {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.6;
+  color: #f2f3e6;
+}
+
+#resume-game-button, #new-game-button {
+  display: flex;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  color: #f2f3e6;
+  background-color: transparent;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border-style: groove;
+}
+
+.pause-modal {
+  display: none;
+}
+
+.game-over-modal {
+  display: none;
+}
+
+#controls-body {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  vertical-align: center;
+}
+
+.modal-image {
+  max-width: 50px;
+  max-height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-ex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.goal-list {
+  list-style-type: circle !important;
+  color: white;
+}
+
+@keyframes changeState {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: "monospace";
+  font-size: 35px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.left, .right {
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.typing-area {
+  display: flex;
+  justify-content: center;
+  background-color: #99B898;
+  width: 1700px;
+  height: 60px;
+  margin: 0;
+}
+
+.typing-area {
+  resize: none;
+  background-color: transparent;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+
+.container {
+  display: inline-flex;
+  background-color: mediumaquamarine;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+.button {
+  max-width: 110px;
+  max-height: 110px;
+  display: inline;
+  flex-direction: column;
+}
+
+canvas {
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+}
+
+#play, #pause, #restart {
+  padding: 20px;
+  position: fixed;
+}
+
+#play {
+  bottom: 510px;
+  left: 5px;
+}
+
+#pause {
+  bottom: 380px;
+  left: 5px;
+}
+
+#restart {
+  bottom: 250px;
+  left: 5px;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button:hover {
+  background: #8c918b;
+  padding: 0.5em 0.5em;
+}
+
+#github-link {
+  max-height: 10px;
+  max-width: 10px;
+  resize: small;
+}
+
+#github-img {
+  max-height: 30px;
+  max-width: 30px;
+}
