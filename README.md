@@ -74,9 +74,45 @@ This project will be implemented using the following technologies:
 
 ## Code ##
 
-
-
-
+  ``` Javascript
+  draw() {
+            let myReq; 
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            const words = Object.values(this.words);
+            if (this.lives > 0 && !this.pause) {
+                this.updateBoard();
+                words.forEach (word => {
+                    this.handleWordDraw(word)
+                });
+                this.inPauseWords.forEach(word => {
+                    word.drawGreen()
+                });
+                myReq = requestAnimationFrame(this.draw.bind(this));
+            } else if (this.lives <= 0 && !this.pause) {
+                   this.updateLivesOnBoard(); 
+                   cancelAnimationFrame(myReq)
+                   words.forEach(word => {
+                       if (word.redCollisionDetection() === true) {
+                           word.drawRed()
+                           word.move()
+                       } else {
+                            word.draw()
+                            word.move()
+                        }; 
+                    })
+                    const gameOverModal = document.querySelector(".game-over-modal"); 
+                    gameOverModal.style.display = "block";
+                } else {
+                cancelAnimationFrame(myReq);
+            }
+ }; 
+  ```
+  
+- The code above is responsible for moving the words down on the screen. 
+- If the game is not over (represented by lives being greater than 0) and it is not paused (represented by this.pause), the words are redrawn on the screen with each word slightly lower than its previous position. This creates the illusion that it is moving down the screen. 
+- If the lives are less than 0, the game is over, the AnimationFrame is stopped and the game over modal is rendered. 
+- Otherwise, it means the game is paused and the AnimationFrame is temporarily cancelled. 
+    
 ## Implementation Timeline ## 
 
 ### Friday Afternoon & Weekend ###
