@@ -74,9 +74,7 @@ This project will be implemented using the following technologies:
 
 ## Code ##
 
-<img width="770" alt="Screen Shot 2021-12-09 at 10 34 01 AM" src="https://user-images.githubusercontent.com/90418154/145426525-1027bbee-c2da-4f59-9d1a-4d8ad8b76e7e.png">
 
-<img width="837" alt="Screen Shot 2021-12-09 at 10 34 38 AM" src="https://user-images.githubusercontent.com/90418154/145426572-54035bc0-d3d2-44e3-96c1-650a047189b1.png">
 
 
 ## Implementation Timeline ## 
