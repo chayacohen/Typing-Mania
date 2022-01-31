@@ -97,9 +97,6 @@ class Game {
                 this.inPauseWords.forEach(word => {
                     word.drawGreen(); 
                 })
-                // this.explosions.forEach(explosion => {
-                //     this.handleExplosionDraw(explosion);
-                // })
                 myReq = requestAnimationFrame(this.draw.bind(this))
             }
             else if (this.lives <= 0 && !this.pause) {
