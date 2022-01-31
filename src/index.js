@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded" , () => {
     const canvas = document.querySelector("canvas");
     const ctx = canvas.getContext('2d');
     const gameview = new GameView(canvas, ctx);
-    ctx.font = "normal 100px Impact";
+    ctx.font = "normal 7em Impact";
     ctx.fillStyle = "black";
-    ctx.fillText("WELCOME TO", (canvas.width/3), (canvas.height / 2.6));
-    ctx.fillText("TYPING MANIA", (canvas.width / 3.15), (canvas.height / 1.6))
+    ctx.fillText("WELCOME TO", (canvas.width/3), (canvas.height / 2.2));
+    ctx.fillText("TYPING MANIA", (canvas.width / 3.15), (canvas.height / 1.5))
 
     const playButton = document.getElementById('play-button'); 
     const resumeGameButton = document.querySelector("#resume-game-button");

@@ -89,7 +89,7 @@ class Game {
             let myReq; 
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             const words = Object.values(this.words);
-            if (this.lives > 0 && this.pause === false) {
+            if (this.lives > 0 && !this.pause) {
                 this.updateBoard();
                 words.forEach (word => {
                     this.handleWordDraw(word)
@@ -102,7 +102,8 @@ class Game {
                 // })
                 myReq = requestAnimationFrame(this.draw.bind(this))
             }
-            else if (this.lives <= 0) {
+            else if (this.lives <= 0 && !this.pause) {
+                    this.updateLivesOnBoard(); 
                     cancelAnimationFrame(myReq)
                     words.forEach(word => {
                         if (word.redCollisionDetection() === true) {
@@ -205,7 +206,7 @@ class Game {
     drawCountdownNum() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.ctx.beginPath();
-        this.ctx.font = "normal 200px Monospace";
+        this.ctx.font = "normal 200px Courier";
         this.ctx.fillStyle = 'black';
         this.ctx.fillText(this.countdownNum, (this.canvas.width / 2), (this.canvas.height / 2));
         this.ctx.closePath();
@@ -216,7 +217,7 @@ class Game {
         const pauseButton = document.getElementById('pause-button');
         const pauseModal = document.querySelector(".pause-modal");
         if (e.target === pauseButton) {
-            if (this.pause === false) {
+            if (!this.pause) {
                 this.pause = true; 
                 this.draw.bind(this)();
                 pauseModal.style.display = "block"

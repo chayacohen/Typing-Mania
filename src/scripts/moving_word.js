@@ -14,7 +14,7 @@ class MovingWord {
 
     draw() {
         this.ctx.beginPath();
-        this.ctx.font = 'normal 40px Monospace';
+        this.ctx.font = 'normal 40px Courier';
         this.ctx.fillStyle = 'black';
         this.ctx.fillText(this.word, this.pos[0], this.pos[1]);
         this.ctx.closePath();
@@ -22,7 +22,7 @@ class MovingWord {
 
     drawRed() {
         this.ctx.beginPath();
-        this.ctx.font = 'normal 40px Monospace';
+        this.ctx.font = 'normal 40px Courier';
         this.ctx.fillStyle = 'red';
         this.ctx.fillText(this.word, this.pos[0], this.pos[1]);
         this.ctx.closePath();
@@ -30,7 +30,7 @@ class MovingWord {
 
     drawGreen() {
         this.ctx.beginPath();
-        this.ctx.font = 'normal 40px Monospace';
+        this.ctx.font = 'normal 40px Courier';
         this.ctx.fillStyle = 'green';
         this.ctx.fillText(this.word, this.pos[0], this.pos[1]);
         this.ctx.closePath();
