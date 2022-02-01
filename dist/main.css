@@ -270,7 +270,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10%;
+  gap: 4%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 45vw;
   height: 6vh;
